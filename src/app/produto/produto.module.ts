@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ProdutoRoutingModule } from './produto-routing.module';
 import { ListaprodutoComponent } from './listaproduto/listaproduto.component';
 
+import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,9 @@ import { ListaprodutoComponent } from './listaproduto/listaproduto.component';
   ],
   imports: [
     CommonModule,
-    ProdutoRoutingModule
+    ProdutoRoutingModule,
+    MatTableModule,
+    MatCardModule
   ]
 })
 export class ProdutoModule { }

@@ -5,6 +5,7 @@ import { CategoriaRoutingModule } from './categoria-routing.module';
 import { ListacategoriaComponent } from './listacategoria/listacategoria.component';
 
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { MatTableModule } from '@angular/material/table';
   imports: [
     CommonModule,
     CategoriaRoutingModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule
   ]
 })
 export class CategoriaModule { }

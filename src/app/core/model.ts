@@ -5,5 +5,5 @@ export interface Categoria {
 
 export interface Produto{
   id: number;
-  nomeprodutos: string;
+  nomeprod: string;
 }

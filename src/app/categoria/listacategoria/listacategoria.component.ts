@@ -1,3 +1,4 @@
+import { CategoriaService } from './../categoria.service';
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/core/model';
 
@@ -8,17 +9,14 @@ import { Categoria } from 'src/app/core/model';
 })
 export class ListacategoriaComponent implements OnInit {
 
-  categorias: Categoria[] = [
-    { id: 1, nomecategoria: 'Carnes' },
-    { id: 2, nomecategoria: 'Verduras' },
-    { id: 3, nomecategoria: 'Frutas' }
-  ]
+  categoria: Categoria[] = []
 
   displayedColumns = ['id', 'nomecategoria'];
 
-  constructor() { }
+  constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(): void {
+  this.categoria = this.categoriaService.listarCategorias()
   }
 
 }

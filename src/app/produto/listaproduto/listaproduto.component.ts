@@ -1,3 +1,5 @@
+import { ProdutoService } from './../produto.service';
+import { Produto } from './../../core/model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaprodutoComponent implements OnInit {
 
-  constructor() { }
+  produto: Produto[] = []
+
+  displayedColumns = ['id', 'nomeprod'];
+
+  constructor(private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
+    this.produto = this.produtoService.listarProd()
   }
 
 }
